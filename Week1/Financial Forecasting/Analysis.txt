@@ -1,0 +1,36 @@
+Time Complexity of Recursive Algorithm
+The recursive function calls itself once per year, so:
+
+Time Complexity: O(n)
+
+Space Complexity: O(n) due to call stack usage
+
+Each call depends on the result of the previous year’s forecast.
+
+Suitable for short-term forecasts but inefficient for large n due to growing recursion depth.
+
+
+
+
+Optimization of Recursive Solution
+Convert to Iteration:
+
+Replace recursion with a loop.
+
+Reduces space complexity from O(n) to O(1)
+
+More efficient and safer for large input sizes.
+
+Use Memoization (if recurrence is complex):
+
+Store previously computed results in an array.
+
+Avoids redundant calculations in recursive calls.
+
+Useful in more complex models .
+
+Tail Recursion (in some languages):
+
+Some compilers optimize tail-recursive functions.
+
+Java does not optimize tail recursion by default, so prefer iteration.
