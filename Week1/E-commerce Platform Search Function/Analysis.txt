@@ -1,0 +1,32 @@
+ Comparison of Time Complexity
+  
+Linear Search:
+
+-Best Case: O(1) (element is at the start)
+-Average Case: O(n)
+-Worst Case: O(n) (element is at the end or not present)
+
+Binary Search:
+
+-Best Case: O(1) (element is in the middle)
+-Average Case: O(log n)
+-Worst Case: O(log n)
+
+Conclusion: Binary search is significantly faster than linear search for large datasets due to logarithmic growth.
+
+
+
+Which Algorithm is More Suitable and Why?
+
+Binary Search is more suitable for an e-commerce platform because:
+
+-Product lists are often large, and binary search is more scalable.
+-Users expect fast, real-time search results.
+-You can pre-sort or index product data by product name or ID.
+-Works well with structured databases and backend optimization.
+
+Linear Search is suitable for:
+
+-Small datasets
+-Quick prototypes or development testing
+-Situations where data isn’t sorted and sorting isn’t worth the overhead
