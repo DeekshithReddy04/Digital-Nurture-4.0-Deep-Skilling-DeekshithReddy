@@ -1,0 +1,49 @@
+@Entity
+@Table(name = "employee")
+public class Employee {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(name = "name")
+    private String name;
+
+    // getters, setters, toString
+}
+
+
+
+
+
+public class HibernateExample {
+
+    public static void main(String[] args) {
+        // Configure session factory
+        SessionFactory factory = new Configuration()
+                .configure("hibernate.cfg.xml") // XML with DB configs
+                .addAnnotatedClass(Employee.class)
+                .buildSessionFactory();
+
+        Session session = factory.getCurrentSession();
+
+        try {
+            // Create employee
+            Employee employee = new Employee();
+            employee.setName("John Doe");
+
+            // Start transaction
+            session.beginTransaction();
+
+            // Save employee
+            session.save(employee);
+
+            // Commit transaction
+            session.getTransaction().commit();
+            System.out.println("Employee saved using Hibernate");
+
+        } finally {
+            factory.close();
+        }
+    }
+}
