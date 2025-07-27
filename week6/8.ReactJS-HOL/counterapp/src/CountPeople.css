@@ -1,0 +1,16 @@
+button {
+  border: 1px solid green;
+  color: darkgreen;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #b2fab4;
+}
+
+p {
+  font-weight: bold;
+  color: #333;
+}
